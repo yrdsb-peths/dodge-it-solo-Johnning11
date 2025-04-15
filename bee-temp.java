@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
-public class Banana extends Actor
+public class bee extends Actor
 {
 
     public void act()
@@ -11,7 +11,7 @@ public class Banana extends Actor
             resetbanana();
         }
         if(isTouching(hero.class)) {
-            Loser loser = new Loser();
+            bee bee = new bee();
             getWorld().addObject(loser, 300, 200);
             getWorld().removeObject(this);
         }
