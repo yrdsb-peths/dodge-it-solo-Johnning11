@@ -6,9 +6,14 @@ public class Banana extends Actor
 
     public void act()
     {
-        move(-4);
+        move(-7);
         if(getX() <= 0) {
             resetbanana();
+        }
+        if(isTouching(hero.class)) {
+            Loser loser = new Loser();
+            getWorld().addObject(loser, 300, 200);
+            getWorld().removeObject(this);
         }
     }
     public void resetbanana() {
